@@ -21,4 +21,9 @@ Vagrant.configure("2") do |config|
   
   # public network => bridged
   config.vm.network "public_network"
+  
+  # install and configure software
+  # config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.synced_folder "C:/Users/Jiri/Documents/development/flask_project", "/vagrant"
+
 end
